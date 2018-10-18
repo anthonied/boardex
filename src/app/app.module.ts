@@ -8,6 +8,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { GameBuyComponent } from './game-buy/game-buy.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { GameBuyComponent } from './game-buy/game-buy.component';
     MessagesComponent,
     DashboardComponent,
     GameBuyComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,
