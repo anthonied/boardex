@@ -1,0 +1,15 @@
+<div *ngIf="game">
+
+  <h2>{{game.name}} Details</h2>
+  <div><span>id: </span>{{game.id}}</div>
+  <div><span>name: </span>{{game.name}}</div>
+  <div><span>rating: </span>{{game.rating}}</div>
+  <div><span>amount: </span>{{game.amount}}</div>
+  <div><span>theme: </span>{{game.theme}}</div>
+  <div><span>price: </span>{{game.price}}</div>
+  <div routerLink = "/buy/{{game.id}}"><button>buy</button></div>
+  <br>
+  <button (click) = "goBack()">go back</button>
+
+</div>
+

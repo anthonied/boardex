@@ -1,0 +1,22 @@
+button {
+    background-color: #a1a1a1;
+    color: #3f3f3f;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #747474;
+    color: #333333;
+    border-color: #858585;
+}
+
+button:disabled {
+    background-color: #333333;
+    border-color: #585858;
+    color: #222222;
+}
+
+td {
+    background-color: #2e557a;
+    border-color: #1f3a53;
+}
