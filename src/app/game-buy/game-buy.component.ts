@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 
 import { Game } from '../game';
 import { GameService } from '../game.service';
+import { CartComponent } from '../cart/cart.component';
 
 @Component({
   selector: 'app-game-buy',
@@ -13,7 +14,7 @@ import { GameService } from '../game.service';
 export class GameBuyComponent implements OnInit {
 
   @Input() game: Game;
-
+  
   constructor(
     private route:ActivatedRoute,
     private gameService: GameService,
@@ -31,6 +32,10 @@ export class GameBuyComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  addToCart(): void {
+    
   }
 
 }

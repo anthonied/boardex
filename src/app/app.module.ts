@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { GameBuyComponent } from './game-buy/game-buy.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     DashboardComponent,
     GameBuyComponent,
     NavBarComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

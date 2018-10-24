@@ -1,2 +1,11 @@
-{{game.name}}
+<div *ngIf = "game.amount > 0">
+    <button (click) = "addToCart()">add to cart</button>
+</div>
+
+<div *ngIf = "!game.amount > 0">
+    <button disabled>add to cart</button>
+</div>
+
+<br>
+
 <button (click) = "goBack()">go back</button>
