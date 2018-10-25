@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Game } from '../game';
-import { GameService } from '../game.service';
-import { GAMES } from '../mock-games';
+import { Game } from '../../game';
+import { GameService } from '../../game.service';
+import { GAMES } from '../../mock-games';
 
 @Component({
   selector: 'app-games',

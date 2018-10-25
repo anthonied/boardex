@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
     this.getGames();
   }
 
-  getGames(): void { 
+  getGames(): void {
     this.gameService.getGames().subscribe(games => this.games = games.slice(1, 5));
   }
 

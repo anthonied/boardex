@@ -1,29 +1,25 @@
+<h3>My Games</h3>
+<div class="row">
+  <div class="col-md-2">
+    <button class="btn btn-lg active" routerLink = "/newGame">+</button>
+  </div>
+
+</div>
+
+<br>
 <table class = "table table-bordered table-dark">
-
   <thead>
-
     <tr>
-
       <td>Name</td>
       <td></td>
-
     </tr>
-
   </thead>
-
   <tbody>
-
     <tr *ngFor="let game of games">
-
-      
       <td>{{game.name}}</td>
-
       <td routerLink = "/detail/{{game.id}}">
         <button>details</button>
       </td>
-
     </tr>
-
   </tbody>
-
 </table>

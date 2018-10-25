@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { GamesComponent } from './games/games.component';
+import { GamesComponent } from './components/games/games.component';
 import { GameDetailComponent } from './game-detail/game-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
