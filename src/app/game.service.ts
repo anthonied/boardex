@@ -24,4 +24,8 @@ export class GameService {
     return of(GAMES.find(game => game.id === id));
   }
 
+  add(game:Game):void {
+    GAMES.push(game);
+  }
+
 }
