@@ -1,5 +1,19 @@
 <div>
   <div class = "form-group">
-    <input class = "form-control" placeholder = "Enter Name" [(ngModule)] = "newGame.name">
+    <input class = "form-control" type = "text" placeholder = "Enter Name" [(ngModel)] = "newGame.name">
+  </div>
+  <div class = "form-group">
+    <input class = "form-control" type = "number" placeholder = "Enter Rating" [(ngModel)] = "newGame.rating">
+  </div>
+  <div class = "form-group">
+    <input class = "form-control" type = "number" placeholder = "Enter Amount" [(ngModel)] = "newGame.amount">
+  </div>
+  <div class = "form-group">
+    <input class = "form-control" type = "text" placeholder = "Enter Theme" [(ngModel)] = "newGame.theme">
+  </div>
+  <div class = "form-group">
+    <input class = "form-control" type = "number" placeholder = "Enter Price" [(ngModel)] = "newGame.price">
   </div>
 </div>
+
+<button (click) = "addClicked()">add game</button>
