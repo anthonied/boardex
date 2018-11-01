@@ -11,6 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { GameBuyComponent } from './game-buy/game-buy.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { GameAddFormComponent } from './components/game-add-form/game-add-form.component';
+import { EditGameComponent } from './components/edit-game/edit-game.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { GameAddFormComponent } from './components/game-add-form/game-add-form.c
     GameBuyComponent,
     NavBarComponent,
     GameAddFormComponent,
+    EditGameComponent,
   ],
   imports: [
     BrowserModule,
