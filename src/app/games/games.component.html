@@ -27,13 +27,15 @@
 
     <tr *ngFor="let game of filteredGames">
 
-      
+
       <td>{{game.name}}</td>
 
       <td routerLink = "/detail/{{game.id}}">
         <button>details</button>
       </td>
-
+      <td routerLink = "/editGame">
+        <button class="btn btn-primary" (click)=  (game)>Edit</button>
+      </td>
     </tr>
 
   </tbody>

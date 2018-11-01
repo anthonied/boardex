@@ -14,6 +14,8 @@ export class GameService {
 
   constructor(private messageService: MessageService) { }
 
+  editGame: Game;
+
   getGames(): Observable<Game[]> {
     this.messageService.add('GameService: fetched games');
     return of (GAMES);

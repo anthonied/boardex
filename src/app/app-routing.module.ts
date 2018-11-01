@@ -14,7 +14,8 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'newGame', component: GameAddFormComponent },
   { path: 'detail/:id', component: GameDetailComponent},
-  { path: 'buy/:id', component: GameBuyComponent}
+  { path: 'buy/:id', component: GameBuyComponent},
+  { path: 'editGame', component: EditGameComponent}
 ]
 
 @NgModule({

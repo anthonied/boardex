@@ -28,8 +28,11 @@ export class GamesComponent implements OnInit {
     });
   }
 
-  search(text:string): void {
+  search(text: string): void {
     this.filteredGames = this.games.filter(game => game.name.indexOf(text) >= 0);
   }
 
+  setEditGame(game: Game) {
+    this.gameService.editGame = game;
+  }
 }
