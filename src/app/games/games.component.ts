@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import { Game } from '../game';
 import { GameService } from '../game.service';
-import { GAMES } from '../mock-games';
 
 @Component({
   selector: 'app-games',
@@ -12,7 +11,9 @@ import { GAMES } from '../mock-games';
 
 export class GamesComponent implements OnInit {
 
-  games: Game[] = GAMES;
+  games: Game[];
+
+  filteredGames: Game[];
 
   constructor(private gameService: GameService) { }
 
@@ -21,7 +22,15 @@ export class GamesComponent implements OnInit {
   }
 
   getGames(): void {
-    this.gameService.getGames().subscribe(games => this.games =  games);
+    this.gameService.getGames().subscribe(games => {
+      this.games =  games;
+      this.filteredGames = games;
+    });
+  }
+
+  search(text:string): void {
+    console.log(text);
+    this.filteredGames = this.games.filter(game => game.name.indexOf(text) >= 0);
   }
 
 }

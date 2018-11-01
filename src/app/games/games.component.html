@@ -2,6 +2,14 @@
   <button class = "btn" routerLink = "/newGame">+</button>
 </div>
 
+<br>
+
+<div>
+  <input placeholder = "search name" type = "text" #searchInput (keyup) = "search(searchInput.value)">
+</div>
+
+<br>
+
 <table class = "table table-bordered table-dark">
 
   <thead>
@@ -17,7 +25,7 @@
 
   <tbody>
 
-    <tr *ngFor="let game of games">
+    <tr *ngFor="let game of filteredGames">
 
       
       <td>{{game.name}}</td>
