@@ -29,7 +29,6 @@ export class GamesComponent implements OnInit {
   }
 
   search(text:string): void {
-    console.log(text);
     this.filteredGames = this.games.filter(game => game.name.indexOf(text) >= 0);
   }
 
