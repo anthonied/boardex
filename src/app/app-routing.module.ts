@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { GameDetailComponent } from './game-detail/game-detail.component';
 import { GameBuyComponent } from './game-buy/game-buy.component';
 import { GameAddFormComponent } from './components/game-add-form/game-add-form.component';
+import { EditGameComponent } from './components/edit-game/edit-game.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/games', pathMatch: 'full'},
