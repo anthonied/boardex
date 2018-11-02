@@ -26,7 +26,6 @@ export class GamesComponent implements OnInit {
 
   delete(id:number): void {
     this.gameService.deleteGame(id);
-    this.games = GAMES;
   }
 
 }
