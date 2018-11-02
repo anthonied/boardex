@@ -6,7 +6,6 @@ import { Game } from './game';
 import { GAMES } from './mock-games';
 
 import { MessageService } from './message.service';
-import { GamesComponent } from './games/games.component';
 
 @Injectable({
   providedIn: 'root'
