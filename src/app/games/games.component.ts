@@ -12,7 +12,9 @@ import { GAMES } from '../mock-games';
 
 export class GamesComponent implements OnInit {
 
-  games: Game[] = GAMES;
+  games: Game[];
+
+  filteredGames: Game[];
 
   constructor(private gameService: GameService) { }
 
@@ -31,6 +33,18 @@ export class GamesComponent implements OnInit {
         item.id--;
       }
     }
+
+    this.gameService.getGames().subscribe(games => {
+      this.games =  games;
+      this.filteredGames = games;
+    });
   }
 
+  search(text: string): void {
+    this.filteredGames = this.games.filter(game => game.name.indexOf(text) >= 0);
+  }
+
+  setEditGame(game: Game) {
+    this.gameService.editGame = game;
+  }
 }

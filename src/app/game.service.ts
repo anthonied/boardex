@@ -15,6 +15,8 @@ export class GameService {
 
   constructor(private messageService: MessageService) { }
 
+  editGame: Game;
+
   getGames(): Observable<Game[]> {
     this.messageService.add('GameService: fetched games');
     return of (GAMES);
@@ -31,6 +33,10 @@ export class GameService {
 
   deleteAllGames(): void {
     GAMES.splice(0, GAMES.length);
+  }
+
+  add(game:Game):void {
+    GAMES.push(game);
   }
 
 }
