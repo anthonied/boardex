@@ -6,6 +6,7 @@
 
       <td>Name</td>
       <td></td>
+      <td></td>
 
     </tr>
 
@@ -20,6 +21,10 @@
 
       <td routerLink = "/detail/{{game.id}}">
         <button>details</button>
+      </td>
+
+      <td>
+        <button (click) = "delete(game.id)">delete</button>
       </td>
 
     </tr>

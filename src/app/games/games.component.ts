@@ -21,7 +21,12 @@ export class GamesComponent implements OnInit {
   }
 
   getGames(): void {
-    this.gameService.getGames().subscribe(games => this.games =  games);
+    this.gameService.getGames().subscribe(games => this.games = games);
+  }
+
+  delete(id:number): void {
+    this.gameService.deleteGame(id);
+    this.games = GAMES;
   }
 
 }
