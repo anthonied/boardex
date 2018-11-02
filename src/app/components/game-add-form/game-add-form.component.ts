@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Game } from 'src/app/game';
 import { GameService } from 'src/app/game.service';
+import { GAMES } from 'src/app/mock-games';
 
 @Component({
   selector: 'app-game-add-form',
@@ -18,6 +19,7 @@ export class GameAddFormComponent implements OnInit {
 
   addClicked():void {
     console.log(this.newGame);
+    this.newGame.id = GAMES.length + 1;
     this.gameService.add(this.newGame);
   }
 
