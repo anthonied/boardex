@@ -26,6 +26,11 @@ export class GamesComponent implements OnInit {
 
   delete(id:number): void {
     this.gameService.deleteGame(id);
+    for(let item of GAMES){
+      if (item.id > id) {
+        item.id--;
+      }
+    }
   }
 
 }
