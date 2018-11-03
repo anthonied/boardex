@@ -48,4 +48,5 @@ export class GamesComponent implements OnInit {
   setEditGame(game: Game) {
     this.gameService.editGame = game;
   }
+  
 }

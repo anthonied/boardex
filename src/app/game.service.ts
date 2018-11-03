@@ -12,6 +12,8 @@ import { MessageService } from './message.service';
 })
 export class GameService {
 
+  length:number = GAMES.length;
+
   constructor(private messageService: MessageService) { }
 
   editGame: Game;
