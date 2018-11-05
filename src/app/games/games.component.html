@@ -10,42 +10,46 @@
 
 <br>
 
-<table class = "table table-bordered table-dark">
+<div *ngIf = "filteredGames.length">
 
-  <thead>
+  <table class = "table table-bordered table-dark">
 
-    <tr>
+    <thead>
 
-      <td>Name</td>
-      <td>Details</td>
-      <td>Delete</td>
-      <td>Edit</td>
+      <tr>
 
-    </tr>
+        <td>Name</td>
+        <td>Details</td>
+        <td>Delete</td>
+        <td>Edit</td>
 
-  </thead>
+      </tr>
 
-  <tbody>
+    </thead>
 
-    <tr *ngFor="let game of filteredGames">
+    <tbody>
+
+      <tr *ngFor="let game of filteredGames">
 
 
-      <td>{{game.name}}</td>
+        <td>{{game.name}}</td>
 
-      <td routerLink = "/detail/{{game.id}}">
-        <button>details</button>
-      </td>
+        <td routerLink = "/detail/{{game.id}}">
+          <button>details</button>
+        </td>
 
-      <td>
-        <button (click) = "delete(game.id)">delete</button>
-      </td>
+        <td>
+          <button (click) = "delete(game.id)">delete</button>
+        </td>
 
-      <td routerLink = "/editGame">
-        <button class="btn btn-primary" (click) = setEditGame(game)>Edit</button>
-      </td>
+        <td routerLink = "/editGame">
+          <button class="btn btn-primary" (click) = setEditGame(game)>Edit</button>
+        </td>
 
-    </tr>
+      </tr>
 
-  </tbody>
+    </tbody>
 
-</table>
+  </table>
+
+</div>
