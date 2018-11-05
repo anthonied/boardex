@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Game } from 'src/app/game';
 import { GameService } from 'src/app/game.service';
+import { GAMES } from 'src/app/mock-games';
 
 @Component({
   selector: 'app-edit-game',
@@ -20,10 +21,7 @@ export class EditGameComponent implements OnInit {
 
   addEditedGame():void {
     console.log("addEdit");
-  }
 
-  goBack():void {
-    
   }
 
 }
