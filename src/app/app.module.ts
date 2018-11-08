@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { GamesComponent } from './games/games.component';
@@ -13,9 +13,9 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { GameAddFormComponent } from './components/game-add-form/game-add-form.component';
 import { EditGameComponent } from './components/edit-game/edit-game.component';
 
-import { AngularFireModule } from '@Angular/fire';
+import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
-import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreModule } from 'angularfire2/firestore';
 
 @NgModule({
   declarations: [

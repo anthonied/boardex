@@ -13,34 +13,34 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class GameService {
 
-  constructor(private messageService: MessageService, private database:AngularFirestore) { }
+  constructor(private messageService: MessageService, private database: AngularFirestore) {
+    this.getGames();
+   }
 
   editGame: Game;
-  games: Game[];
+  games: Observable<Game[]>;
 
   getGames(): void {
     this.messageService.add('GameService: fetched games');
-    this.database.collection<Game>('games').valueChanges().subscribe(games => this.games = games);
+    this.games = this.database.collection<Game>('games').valueChanges();
   }
 
-  getGame(id: number): Observable<Game> {
-    this.messageService.add('GameService: fetched game id=${id}');
-    return of(this.games.find(game => game.id === id));
+
+
+
+
+  deleteGame(game: Game): void {
+  //  const index = this.games.indexOf(game);
+  //  console.log(index);
+
+  //  if (index !== -1) {
+  //    this.games.splice(index, 1);
+  //  }
+
   }
 
-  
-  deleteGame(game:Game): void {
-    const index = this.games.indexOf(game);
-    console.log(index);
-
-    if (index !== -1) {
-      this.games.splice(index, 1);
-    }
-    
-  }
-
-  add(game:Game):void {
-    this.games.push(game);
+  add(game: Game): void {
+    // this.games.push(game);
   }
 
 }

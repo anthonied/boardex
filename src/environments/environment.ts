@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyD6rjDagesM2PVEJ8RbjLok8Fw_5Fku8uc",
-    authDomain: "boardex-e7eed.firebaseapp.com",
-    databaseURL: "https://boardex-e7eed.firebaseio.com",
-    projectId: "boardex-e7eed",
-    storageBucket: "boardex-e7eed.appspot.com",
-    messagingSenderId: "629672045150"
+    apiKey: 'AIzaSyD6rjDagesM2PVEJ8RbjLok8Fw_5Fku8uc',
+    authDomain: 'boardex-e7eed.firebaseapp.com',
+    databaseURL: 'https://boardex-e7eed.firebaseio.com',
+    projectId: 'boardex-e7eed',
+    storageBucket: 'boardex-e7eed.appspot.com',
+    messagingSenderId: '629672045150'
   }
 };
 

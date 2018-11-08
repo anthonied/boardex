@@ -23,8 +23,15 @@ export class GamesComponent implements OnInit {
   }
 
   getGames(): void {
-    this.gameService.getGames();
-    this.games = this.gameService.games;
+    if (!this.gameService.games) {
+      return;
+    }
+    this.gameService.games.subscribe(games => {
+     console.log(games);
+
+      this.games = games;
+      this.filteredGames = games;
+    });
   }
 
   delete(gameToDelete:Game): void {
@@ -39,5 +46,5 @@ export class GamesComponent implements OnInit {
   setEditGame(game: Game) {
     this.gameService.editGame = game;
   }
-  
+
 }
