@@ -19,7 +19,7 @@ export class GameAddFormComponent implements OnInit {
 
   addClicked():void {
 
-    this.newGame.id = this.gameService.length;
+   // this.newGame.id = this.gameService.length;
     console.log(this.newGame);
     if (!GAMES.includes(this.newGame, 0)) {
       this.gameService.add(this.newGame);

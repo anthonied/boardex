@@ -20,24 +20,15 @@ export class GamesComponent implements OnInit {
 
   ngOnInit() {
     this.getGames();
-    this.gameService.getGames().subscribe(games => {
-      this.games = games;
-      this.filteredGames = games;
-    });
   }
 
   getGames(): void {
-    this.gameService.getGames().subscribe(games => this.games = games);
+    this.gameService.getGames();
+    this.games = this.gameService.games;
   }
 
-  delete(id:number): void {
-    this.gameService.deleteGame(id);
-    //decrement all the games' id's that are after the deleted game's id
-    for(let game of GAMES){
-      if (game.id > id) {
-        game.id -= 1;
-      }
-    }
+  delete(gameToDelete:Game): void {
+    this.gameService.deleteGame(gameToDelete)
   }
 
   search(text: string): void {

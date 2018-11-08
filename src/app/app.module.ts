@@ -13,6 +13,10 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { GameAddFormComponent } from './components/game-add-form/game-add-form.component';
 import { EditGameComponent } from './components/edit-game/edit-game.component';
 
+import { AngularFireModule } from '@Angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,9 +32,11 @@ import { EditGameComponent } from './components/edit-game/edit-game.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
